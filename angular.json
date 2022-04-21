@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "aiexpo-angular": {
+    "aiexpo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/aiexpo-angular",
+            "outputPath": "dist/aiexpo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "aiexpo-angular:build:production"
+              "browserTarget": "aiexpo:build:production"
             },
             "development": {
-              "browserTarget": "aiexpo-angular:build:development"
+              "browserTarget": "aiexpo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "aiexpo-angular:build"
+            "browserTarget": "aiexpo:build"
           }
         },
         "test": {
@@ -107,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "aiexpo-angular"
+  "defaultProject": "aiexpo"
 }
