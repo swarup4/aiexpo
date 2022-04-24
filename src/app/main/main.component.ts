@@ -3,11 +3,11 @@ import {ChangeDetectorRef, Component,OnDestroy,AfterViewInit, OnInit} from '@ang
 // import { MenuItems } from '../common/sidebar/menu-items';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss']
 })
-export class DashboardComponent implements OnDestroy, AfterViewInit {
+export class MainComponent implements OnDestroy, AfterViewInit {
 
   mobileQuery: MediaQueryList;
 
