@@ -15,6 +15,10 @@ import { ContactsComponent } from './common/contacts/contacts.component';
 import { StickerComponent } from './common/sticker/sticker.component';
 import { VisiterGraphComponent } from './common/visiter-graph/visiter-graph.component';
 import { SalesOverviewGrapComponent } from './common/sales-overview-grap/sales-overview-grap.component';
+import { HaggleBotComponent } from './haggle-bot/haggle-bot.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
@@ -29,7 +33,11 @@ import { SalesOverviewGrapComponent } from './common/sales-overview-grap/sales-o
     ContactsComponent,
     StickerComponent,
     VisiterGraphComponent,
-    SalesOverviewGrapComponent
+    SalesOverviewGrapComponent,
+    HaggleBotComponent,
+    LoginComponent,
+    SignupComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

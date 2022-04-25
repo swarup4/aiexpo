@@ -1,29 +1,30 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HaggleBotComponent } from './haggle-bot/haggle-bot.component';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
-  {path: '', component: MainComponent},
-  // {
-  //   path: '',
-  //   component: MainComponent,
-  //   children: [
-  //     {
-  //       path: '',
-  //       redirectTo: '/dashboard',
-  //       pathMatch: 'full'
-  //     },
-  //     {
-  //       path: '',
-  //       loadChildren:
-  //         () => import('./material-component/material.module').then(m => m.MaterialComponentsModule)
-  //     },
-  //     {
-  //       path: 'dashboard',
-  //       loadChildren: () => import('../dashboard/dashboard.module').then(m => m.DashboardModule)
-  //     }
-  //   ]
-  // }
+  {
+    path: '',
+    component: MainComponent,
+    children: [
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      }
+    ]
+  }, {
+    path: 'haggle',
+    component: HaggleBotComponent,
+    children: [
+      {
+        path: '',
+        component: ProductComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({
