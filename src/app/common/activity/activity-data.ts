@@ -12,7 +12,7 @@ export interface Activity{
 export const activities:Activity[]=[
     {
         name:'Nirav joshi',
-        image:'assets/images/users/1.jpg',
+        image:'assets/images/users/Me.jpg',
         commentTime:'5 minute ago',
         comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.',
     

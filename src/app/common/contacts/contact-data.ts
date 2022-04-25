@@ -7,7 +7,7 @@ export interface Contact {
 
 export const contacts: Contact[] = [
     {
-        image: 'assets/images/users/1.jpg',
+        image: 'assets/images/users/Me.jpg',
         class: 'online',
         name: 'Pavan kumar',
         email: 'info@wrappixel.com'
