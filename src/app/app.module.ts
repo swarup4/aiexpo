@@ -19,6 +19,7 @@ import { HaggleBotComponent } from './haggle-bot/haggle-bot.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProductComponent } from './product/product.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ProductComponent } from './product/product.component';
     HaggleBotComponent,
     LoginComponent,
     SignupComponent,
-    ProductComponent
+    ProductComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,

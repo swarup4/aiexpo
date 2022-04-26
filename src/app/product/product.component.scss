@@ -1,0 +1,34 @@
+.chat-panel {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+
+    .chat-popup {
+        height: 450px;
+        width: 320px;
+        background: #fff;
+        box-shadow: 1px 0px 10px rgb(0 0 0 / 30%);
+        box-sizing: border-box;
+    }
+
+    .chat-button {
+        float: left;
+        width: 100%;
+        margin-top: 10px;
+
+        button {
+            float: right;
+        }
+    }
+
+    .bot-image {
+        height: 56px;
+        border-radius: 50px;
+        overflow: hidden;
+
+        img {
+            width: 56px;
+            height: 56px;
+        }
+    }
+}
