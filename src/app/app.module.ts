@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProductComponent } from './product/product.component';
 import { ChatComponent } from './chat/chat.component';
+import { BreadcrumbComponent } from './common/breadcrumb/breadcrumb.component';
 
 
 import { ChatService } from './chat/chat.service';
@@ -43,7 +44,8 @@ import { ChatService } from './chat/chat.service';
     LoginComponent,
     SignupComponent,
     ProductComponent,
-    ChatComponent
+    ChatComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,

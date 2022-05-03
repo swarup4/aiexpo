@@ -11,29 +11,37 @@
 
 @import './assets/styles/icons/material-design-iconic-font/css/materialdesignicons.min.css';
 @import "./assets/styles/icons/material-design-iconic-font/css/material-design-iconic-font.css";
+@import "./assets/styles/icons/themify-icons/themify-icons.css";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 
-::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  /* Track */
-  
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  
-  /* Handle */
-  
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-  
-  /* Handle on hover */
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+// ::-webkit-scrollbar {
+//   width: 6px;
+// }
+
+// /* Track */
+
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1;
+// }
+
+// /* Handle */
+
+// ::-webkit-scrollbar-thumb {
+//   background: #888;
+// }
+
+// /* Handle on hover */
+
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #555;
+// }

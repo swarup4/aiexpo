@@ -730,6 +730,12 @@ froms
   width: 100%;
 }
 
+.mat-raised-button{
+  &.mat-accent{
+    color: $white;
+  }
+}
+
 /*******************
 Mat card
 *******************/

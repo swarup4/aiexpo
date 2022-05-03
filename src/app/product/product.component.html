@@ -1,98 +1,25 @@
 <div>
-    <div fxLayout="row wrap">
-        <!-- column -->
-        <div fxFlex.gt-lg="33" fxFlex.gt-md="33" fxFlex.gt-xs="100" fxFlex="100">
-            <mat-card>
+    <app-breadcrumb></app-breadcrumb>
+
+    <!-- Cards -->
+    <div fxLayout="row wrap" fxLayoutGap="30px grid">
+        <div fxFlex.md="33%" fxFlex.lg="33%" fxFlex.xl="33%" fxFlex.sm="100%" *ngFor="let prod of product">
+            <mat-card class="overflow-hidden product">
+                <div class="product-image">
+                    <img src="{{ prod.image }}" alt="">
+                </div>
                 <mat-card-content>
-                    <div class="d-flex flex-wrap">
-                        <div>
-                            <mat-card-title>Sales Overview</mat-card-title>
-                            <mat-card-subtitle>Ample Admin Vs Material Admin</mat-card-subtitle>
-                        </div>
-                        <div class="ml-auto">
-                            <ul class="list-inline">
-                                <li>
-                                    <h6 class="text-success m-0">
-                                        <i class="mdi mdi-checkbox-blank-circle font-10 m-r-10 "></i>Ample
-                                    </h6>
-                                </li>
-                                <li>
-                                    <h6 class=" text-info m-0">
-                                        <i class="mdi mdi-checkbox-blank-circle font-10 m-r-10"></i>Pixel
-                                    </h6>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <div>
+                        <p class="fs-18 lh-lg fw-medium">
+                            {{ prod.name }}
+                        </p>
+                        <!-- <p class="op-7">
+                            Some quick example text to build on the card title and make up the bulk of the card's
+                            content.
+                        </p> -->
 
-                    <div class="barchrt" style="height:360px;">
-                        <!-- <x-chartist class="" [data]="barChart1.data" [type]="barChart1.type" [options]="barChart1.options" [responsiveOptions]="barChart1.responsiveOptions"
-                            > </x-chartist> -->
-                    </div>
-                </mat-card-content>
-            </mat-card>
-
-        </div>
-        <!-- column -->
-        <!-- column -->
-        <div fxFlex.gt-lg="33" fxFlex.gt-md="33" fxFlex.gt-xs="100" fxFlex="100">
-
-            <mat-card>
-                <mat-card-content>
-                    <div class="d-flex flex-wrap">
-                        <div>
-                            <mat-card-title>Sales Overview</mat-card-title>
-                            <mat-card-subtitle>Ample Admin Vs Material Admin</mat-card-subtitle>
-                        </div>
-                        <div class="ml-auto">
-                            <ul class="list-inline">
-                                <li>
-                                    <h6 class="text-success m-0"><i
-                                            class="mdi mdi-checkbox-blank-circle font-10 m-r-10 "></i>Ample</h6>
-                                </li>
-                                <li>
-                                    <h6 class=" text-info m-0"><i
-                                            class="mdi mdi-checkbox-blank-circle font-10 m-r-10"></i>Pixel</h6>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="barchrt" style="height:360px;">
-                        <!-- <x-chartist class="" [data]="barChart1.data" [type]="barChart1.type" [options]="barChart1.options" [responsiveOptions]="barChart1.responsiveOptions"
-                            > </x-chartist> -->
-                    </div>
-                </mat-card-content>
-            </mat-card>
-
-        </div>
-        <!-- column -->
-        <div fxFlex.gt-lg="33" fxFlex.gt-md="33" fxFlex.gt-xs="100" fxFlex="100">
-
-            <mat-card>
-                <mat-card-content>
-                    <div class="d-flex flex-wrap">
-                        <div>
-                            <mat-card-title>Sales Overview</mat-card-title>
-                            <mat-card-subtitle>Ample Admin Vs Material Admin</mat-card-subtitle>
-                        </div>
-                        <div class="ml-auto">
-                            <ul class="list-inline">
-                                <li>
-                                    <h6 class="text-success m-0"><i
-                                            class="mdi mdi-checkbox-blank-circle font-10 m-r-10 "></i>Ample</h6>
-                                </li>
-                                <li>
-                                    <h6 class=" text-info m-0"><i
-                                            class="mdi mdi-checkbox-blank-circle font-10 m-r-10"></i>Pixel</h6>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="barchrt" style="height:360px;">
-                        <!-- <x-chartist class="" [data]="barChart1.data" [type]="barChart1.type" [options]="barChart1.options" [responsiveOptions]="barChart1.responsiveOptions"
-                            > </x-chartist> -->
+                        <!-- <button mat-button class="btn {{ card.btn }} fw-normal mt-4">Learn More</button> -->
+                        <button mat-raised-button color="accent">Check Price</button>
                     </div>
                 </mat-card-content>
             </mat-card>
