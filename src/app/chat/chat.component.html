@@ -22,10 +22,21 @@
       </div>
       Bot
     </mat-toolbar>
-    <div class="chat-box"></div>
+
+    <div class="chat-box">
+      <ng-container *ngFor="let message of messages">
+        <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot', 'to':   message.sentBy === 'user' }">
+          <div>
+            <span class="message-text">{{ message.content }}</span>
+          </div>
+          <span class="message-time">{{ message.time }}</span>
+        </div>
+      </ng-container>
+    </div>
+
     <div class="chat-area">
       <mat-form-field class="example-full-width" appearance="fill">
-        <textarea matInput placeholder="Enter your answer..."></textarea>
+        <textarea matInput placeholder="Enter your answer..." [(ngModel)]="message" (keyup.enter)="sendMessage(message)"></textarea>
       </mat-form-field>
     </div>
   </div>

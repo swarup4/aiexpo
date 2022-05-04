@@ -26,6 +26,8 @@
 
         .chat-box {
             height: 310px;
+            padding: 10px 15px;
+            overflow-y: scroll;
         }
     }
 
@@ -52,29 +54,57 @@
 }
 
 .message {
-    border-radius: 25px;
-    margin: 0 15px 10px;
-    padding: 15px 20px;
-    position: relative;
-    font-weight: bold;
+    > div {
+        float: left;
+        width: 100%;
+    }
+    .message-text {
+        border-radius: 20px;
+        padding: 15px 20px;
+        position: relative;
+        font-size: 14px;
+        display: inline-block;
+        min-width: 20%;
+    }
+
+    .message-time {
+        display: block;
+        font-size: 12px;
+        padding-top: 4px;
+        color: #ccc;
+    }
+
+    &.to {
+        .message-text {
+            background-color: #2095FE;
+            color: #fff;
+            margin-left: 25%;
+            text-align: right;
+            float: right;
+        }
+        .message-time{
+            text-align: right;
+            padding-right: 20px;
+        }
+    }
+
+    &.from {
+        .message-text {
+            background-color: #E5E4E9;
+            color: #363636;
+            margin-right: 25%;
+        }
+        .message-time{
+            text-align: left;
+            padding-left: 20px;
+        }
+    }
 }
 
-.message.to {
-    background-color: #2095FE;
-    color: #fff;
-    margin-left: 20%;
-    text-align: right;
-}
-
-.message.from {
-    background-color: #E5E4E9;
-    color: #363636;
-    margin-right: 25%;
-}
 
 .message.to+.message.to,
 .message.from+.message.from {
-    margin-top: -10px;
+    margin-top: -16px;
 }
 
 .header {

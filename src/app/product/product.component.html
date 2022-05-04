@@ -18,14 +18,13 @@
                             content.
                         </p> -->
 
-                        <!-- <button mat-button class="btn {{ card.btn }} fw-normal mt-4">Learn More</button> -->
-                        <button mat-raised-button color="accent">Check Price</button>
+                        <button mat-raised-button color="accent" (click)="chat.triggerCheckPrice(prod.id)">Check Price</button>
                     </div>
                 </mat-card-content>
             </mat-card>
         </div>
     </div>
 
-    <app-chat></app-chat>
+    <app-chat #chat></app-chat>
 
 </div>
