@@ -4,6 +4,7 @@ import { MainComponent } from './main/main.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HaggleBotComponent } from './haggle-bot/haggle-bot.component';
 import { ProductComponent } from './product/product.component';
+import { LinearRegressionComponent } from './machine-learning/linear-regression/linear-regression.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,9 @@ const routes: Routes = [
       {
         path: 'dashboard',
         component: DashboardComponent
+      }, {
+        path: 'linear',
+        component: LinearRegressionComponent
       }
     ]
   }, {

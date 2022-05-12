@@ -8,6 +8,7 @@ export interface Menu {
 const MENUITEMS = [
   { state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'av_timer' },
   { state: 'haggle', type: 'link', name: 'Haggle Bot', icon: 'chat_bubble_outline' },
+  { state: 'linear', type: 'link', name: 'Linear Regrassion', icon: 'show_chart' },
   // { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },
   // { state: 'lists', type: 'link', name: 'Lists', icon: 'view_list' },
   // { state: 'menu', type: 'link', name: 'Menu', icon: 'view_headline' },

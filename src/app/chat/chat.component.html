@@ -24,12 +24,12 @@
     </mat-toolbar>
 
     <div class="chat-box">
-      <ng-container *ngFor="let message of messages">
-        <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot', 'to':   message.sentBy === 'user' }">
+      <ng-container *ngFor="let msg of messages">
+        <div class="message" [ngClass]="{ 'from': msg.sentBy === 'bot', 'to':   msg.sentBy === 'user' }">
           <div>
-            <span class="message-text">{{ message.content }}</span>
+            <span class="message-text">{{ msg.content }}</span>
           </div>
-          <span class="message-time">{{ message.time }}</span>
+          <span class="message-time">{{ msg.time }}</span>
         </div>
       </ng-container>
     </div>

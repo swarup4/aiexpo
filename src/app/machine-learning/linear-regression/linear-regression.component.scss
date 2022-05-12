@@ -1,0 +1,19 @@
+.project {
+    border-radius: 20px;
+    overflow: hidden;
+
+    .mat-card-header {
+        .mat-card-title {
+            font-size: 18px;
+        }
+    }
+
+    .mat-card-actions {
+        border-top: 1px solid rgba(120, 130, 140, .13);
+        padding: 8px 0 !important;
+
+        .mat-button {
+            font-size: 18px;
+        }
+    }
+}

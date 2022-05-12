@@ -1,5 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +26,8 @@ import { BreadcrumbComponent } from './common/breadcrumb/breadcrumb.component';
 
 
 import { ChatService } from './chat/chat.service';
+import { LogisticRegressionComponent } from './machine-learning/logistic-regression/logistic-regression.component';
+import { LinearRegressionComponent } from './machine-learning/linear-regression/linear-regression.component';
 
 
 @NgModule({
@@ -45,12 +48,15 @@ import { ChatService } from './chat/chat.service';
     SignupComponent,
     ProductComponent,
     ChatComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    LogisticRegressionComponent,
+    LinearRegressionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
     MaterialModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],

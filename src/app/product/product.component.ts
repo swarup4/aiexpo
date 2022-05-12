@@ -13,6 +13,8 @@ interface Product {
 })
 export class ProductComponent implements OnInit {
 
+  pageName: string = 'Product';
+
   product: Product[] = [
     {
       id: 1,

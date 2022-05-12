@@ -1,14 +1,13 @@
 <div class="page-breadcrumb">
-    <div fxLayout="row" fxLayoutAlign="space-between center" >
-        <div class="heading">Product List</div>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="heading">{{ heading }}</div>
         <div class="breadcrumb">
             <ul class="list-style-none">
                 <li class="breadcrumb-item">
-                    <a href="#">Dashboard</a>
+                    <a [routerLink]="['/dashboard']">Dashboard</a>
                 </li>
-                <li class="breadcrumb-item active">Product</li>
+                <li class="breadcrumb-item active">{{ heading }}</li>
             </ul>
         </div>
     </div>
 </div>
-

@@ -1,14 +1,15 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-// import { environment } from '../../environments/environment';
-
-// import { ApiAiClient } from 'api-ai-javascript';
-
-// import { Observable } from 'rxjs/Observable';
-import { BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 // Message class for displaying messages in the component
-export class Message {
-  constructor(public content: string, public sentBy: string) { }
+// export class Message {
+//   constructor(public content: string, public sentBy: string) { }
+// }
+
+export interface Chat {
+  recipient_id: string,
+  text: string
 }
 
 
@@ -20,9 +21,13 @@ export class ChatService {
   // readonly token = environment.dialogflow.angularBot;
   // readonly client = new ApiAiClient({ accessToken: this.token });
 
-  conversation = new BehaviorSubject<Message[]>([]);
+  // conversation = new BehaviorSubject<Message[]>([]);
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  converse(message: any) : Observable<Chat> {
+    return this.http.post<Chat>('http://localhost:5005/webhooks/rest/webhook', message);
+  }
 
   // Sends and receives messages via DialogFlow
   // converse(msg: string) {

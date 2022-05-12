@@ -1,12 +1,12 @@
 <div>
-    <app-breadcrumb></app-breadcrumb>
+    <app-breadcrumb [heading]="pageName"></app-breadcrumb>
 
     <!-- Cards -->
     <div fxLayout="row wrap" fxLayoutGap="30px grid">
         <div fxFlex.md="33%" fxFlex.lg="33%" fxFlex.xl="33%" fxFlex.sm="100%" *ngFor="let prod of product">
-            <mat-card class="overflow-hidden product">
+            <mat-card class="product">
                 <div class="product-image">
-                    <img src="{{ prod.image }}" alt="">
+                    <img [src]="prod.image" alt="">
                 </div>
                 <mat-card-content>
                     <div>

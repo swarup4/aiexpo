@@ -52,24 +52,6 @@ export class ChatComponent implements OnInit {
 
   display(){
     this.chatPopUp = !this.chatPopUp;
-
-    let obj = [{
-      sentBy: "bot",
-      content: "Hi Swarup",
-      time: "19:58"
-    }, {
-      sentBy: "bot",
-      content: "How are You?",
-      time: "19:58"
-    }, {
-      sentBy: "user",
-      content: "Hi Bot. How are you?",
-      time: "19:59"
-    }]
-
-    setTimeout(() => {
-      this.messages = obj;
-    }, 1000);
   }
 
   triggerCheckPrice(id: number){
@@ -90,8 +72,25 @@ export class ChatComponent implements OnInit {
       content: msg,
       time: this.getTime()
     }
-
     this.messages.push(obj);
+
+    let sendObj = {
+      sender: "Swarup",
+      message: msg
+     }
+
+    this.chatService.converse(sendObj).subscribe((res: any) => {
+      // console.log(res);
+      let botObj = {
+        sentBy: "bot",
+        content: res[0].text,
+        time: this.getTime()
+      }
+      console.log(botObj);
+      this.messages.push(botObj);
+    }, err => {
+      console.log(err);
+    });
   }
 
   // ngAfterViewChecked() {
