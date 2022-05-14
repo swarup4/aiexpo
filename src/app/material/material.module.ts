@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ChartistModule } from "ng-chartist";
 
 // *************** FORM CONTROLS ***************
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -55,7 +54,6 @@ import { MatTableModule } from '@angular/material/table';
 const AllMaterialModules = [
   BrowserAnimationsModule,
   FlexLayoutModule,
-  ChartistModule,
   MatAutocompleteModule,
   MatCheckboxModule,
   MatDatepickerModule,

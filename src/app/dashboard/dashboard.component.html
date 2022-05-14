@@ -1,39 +1,14 @@
-<!-- ============================================================== -->
-<!-- Simple four boxes Row -->
-<!-- ============================================================== -->
-<div fxLayout="row wrap">
-    <!-- column -->
-    <div fxFlex.gt-lg="66" fxFlex.gt-md="66" fxFlex.gt-xs="100" fxFlex="100">
+<app-sales></app-sales>
 
-        <app-sales-overview-grap></app-sales-overview-grap>
-
+<div>
+  <div fxLayout="row wrap" fxLayoutGap="30px grid">
+    <div fxFlex.md="33%" fxFlex.lg="33%" fxFlex.xl="33%" fxFlex.sm="100%">
+      <app-activity></app-activity>
     </div>
-    <!-- column -->
-    <!-- column -->
-    <div fxFlex.gt-lg="33" fxFlex.gt-md="33" fxFlex.gt-xs="100" fxFlex="100">
-
-        <!-- <app-visiter-graph></app-visiter-graph> -->
-
+    <div fxFlex.md="66%" class="overflow-x-hidden" fxFlex.lg="66%" fxFlex.xl="66%" fxFlex.sm="100%">
+      <app-product-list></app-product-list>
     </div>
-    <!-- column -->
+  </div>
 </div>
 
-<!-- ============================================================== -->
-<!-- Image Card row-->
-<!-- ============================================================== -->
-<div fxLayout="row wrap">
-    <!-- Card column -->
-    <div fxFlex.gt-lg="25" fxFlex.gt-md="40" fxFlex.gt-xs="100" fxFlex="100">
-
-        <app-sticker></app-sticker>
-        <app-contacts></app-contacts>
-
-    </div>
-    <!-- Card column -->
-    <!-- Card column -->
-    <div fxFlex.gt-lg="75" fxFlex.gt-md="60" fxFlex.gt-xs="100" fxFlex="100">
-
-        <app-activity></app-activity>
-
-    </div>
-</div>
+<app-cards></app-cards>

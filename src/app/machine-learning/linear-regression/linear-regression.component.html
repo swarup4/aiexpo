@@ -2,9 +2,9 @@
     <app-breadcrumb [heading]="pageName"></app-breadcrumb>
 
     <!-- Cards -->
-    <div fxLayout="row wrap" fxLayoutGap="30px grid">
+    <div fxLayout="row wrap" fxLayoutGap="grid" class="container">
         <div fxFlex.md="33%" fxFlex.lg="33%" fxFlex.xl="33%" fxFlex.sm="100%" *ngFor="let prod of product">
-            <mat-card class="project">
+            <mat-card>
                 <mat-card-header class="text-white" [ngClass]="prod.theme">
                     <mat-card-title>{{ prod.name }}</mat-card-title>
                 </mat-card-header>
@@ -16,8 +16,6 @@
                     </div>
                 </mat-card-content>
                 <mat-card-actions class="text-center">
-                    <!-- <button mat-button color="primary">Analytics</button>
-                    <button mat-button color="accent">Predict</button> -->
                     <a mat-button color="primary">Analytics</a>
                     <a mat-button color="accent">Predict</a>
                 </mat-card-actions>

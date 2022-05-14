@@ -3,20 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+import { FeatherModule } from 'angular-feather';
+import { allIcons } from 'angular-feather/icons';
+import { NgApexchartsModule } from 'ng-apexcharts';
+
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material/material.module';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { HeaderComponent } from './common/header/header.component';
 import { SpinnerComponent } from './common/spinner/spinner.component';
 import { MainComponent } from './main/main.component';
-import { ActivityComponent } from './common/activity/activity.component';
 import { ContactsComponent } from './common/contacts/contacts.component';
 import { StickerComponent } from './common/sticker/sticker.component';
-import { VisiterGraphComponent } from './common/visiter-graph/visiter-graph.component';
-import { SalesOverviewGrapComponent } from './common/sales-overview-grap/sales-overview-grap.component';
 import { HaggleBotComponent } from './haggle-bot/haggle-bot.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -28,21 +28,22 @@ import { BreadcrumbComponent } from './common/breadcrumb/breadcrumb.component';
 import { ChatService } from './chat/chat.service';
 import { LogisticRegressionComponent } from './machine-learning/logistic-regression/logistic-regression.component';
 import { LinearRegressionComponent } from './machine-learning/linear-regression/linear-regression.component';
+import { SalesComponent } from './sales/sales.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ActivityComponent } from './common/activity/activity.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    SidebarComponent,
     HeaderComponent,
     SpinnerComponent,
     MainComponent,
     ActivityComponent,
     ContactsComponent,
     StickerComponent,
-    VisiterGraphComponent,
-    SalesOverviewGrapComponent,
     HaggleBotComponent,
     LoginComponent,
     SignupComponent,
@@ -50,14 +51,19 @@ import { LinearRegressionComponent } from './machine-learning/linear-regression/
     ChatComponent,
     BreadcrumbComponent,
     LogisticRegressionComponent,
-    LinearRegressionComponent
+    LinearRegressionComponent,
+    SalesComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    FeatherModule.pick(allIcons),
     AppRoutingModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule,
+    NgApexchartsModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [ChatService],

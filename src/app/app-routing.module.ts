@@ -13,22 +13,25 @@ const routes: Routes = [
     // redirectTo: '/dashboard',
     children: [
       {
-        path: 'dashboard',
+        path: '',
         component: DashboardComponent
+      }, {
+        path: 'haggle',
+        component: ProductComponent
       }, {
         path: 'linear',
         component: LinearRegressionComponent
       }
     ]
-  }, {
-    path: 'haggle',
-    component: HaggleBotComponent,
-    children: [
-      {
-        path: '',
-        component: ProductComponent
-      }
-    ]
+  // }, {
+  //   path: 'haggle',
+  //   component: HaggleBotComponent,
+  //   children: [
+  //     {
+  //       path: '',
+  //       component: ProductComponent
+  //     }
+  //   ]
   }
 ];
 
