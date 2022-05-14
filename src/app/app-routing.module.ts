@@ -10,10 +10,13 @@ const routes: Routes = [
   {
     path: '',
     component: MainComponent,
-    // redirectTo: '/dashboard',
     children: [
       {
         path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      }, {
+        path: 'home',
         component: DashboardComponent
       }, {
         path: 'haggle',

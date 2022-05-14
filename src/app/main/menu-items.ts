@@ -5,7 +5,7 @@ interface sidebarMenu {
 }
 
 const MENUITEMS = [
-  { link: "", icon: "home", menu: "Dashboard" },
+  { link: "home", icon: "home", menu: "Dashboard" },
   // { link: "/button", icon: "disc", menu: "Buttons" },
   { link: 'haggle', icon: "message-circle", menu: 'Haggle Bot' },
   { link: 'linear', icon: "bar-chart-2", menu: 'Linear Regrassion' },
