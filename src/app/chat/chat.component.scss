@@ -9,25 +9,44 @@
         background: #fff;
         box-shadow: 1px 0px 10px rgb(0 0 0 / 30%);
         box-sizing: border-box;
+        border-radius: 20px;
+        overflow: auto;
 
         .bot-aveter {
-            height: 50px;
-            border-radius: 50px;
-            width: 50px;
+            height: 40px;
+            border-radius: 50%;
+            width: 40px;
             overflow: hidden;
-            padding: 5px;
+            padding: 4px;
             background: #fff;
             margin-right: 8px;
             
             img{
-                width: 40px;
+                width: 32px;
+            }
+        }
+
+        .chat-heading{
+            height: 50px;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+
+            .close-chat{
+                position: absolute;
+                right: 10px;
             }
         }
 
         .chat-box {
-            height: 310px;
+            height: 331px;
             padding: 10px 15px;
             overflow-y: scroll;
+        }
+
+        .chat-area{
+            .mat-form-field{
+                width: 100%;
+            }
         }
     }
 
@@ -38,9 +57,7 @@
 
         button {
             float: right;
-            >span{
-                padding: 0;
-            }
+            position: relative;
         }
     }
 
@@ -48,6 +65,9 @@
         height: 56px;
         border-radius: 50px;
         overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
 
         img {
             width: 56px;
