@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { FeatherModule } from 'angular-feather';
 import { allIcons } from 'angular-feather/icons';
-import { NgApexchartsModule } from 'ng-apexcharts';
+// import { NgApexchartsModule } from 'ng-apexcharts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material/material.module';
@@ -28,7 +28,7 @@ import { BreadcrumbComponent } from './common/breadcrumb/breadcrumb.component';
 import { ChatService } from './chat/chat.service';
 import { LogisticRegressionComponent } from './machine-learning/logistic-regression/logistic-regression.component';
 import { LinearRegressionComponent } from './machine-learning/linear-regression/linear-regression.component';
-import { SalesComponent } from './sales/sales.component';
+// import { SalesComponent } from './common/sales/sales.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ActivityComponent } from './common/activity/activity.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -52,7 +52,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BreadcrumbComponent,
     LogisticRegressionComponent,
     LinearRegressionComponent,
-    SalesComponent,
     ProductListComponent
   ],
   imports: [
@@ -63,7 +62,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     MaterialModule,
     BrowserAnimationsModule,
-    NgApexchartsModule
+    // NgApexchartsModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [ChatService],
