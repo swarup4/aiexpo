@@ -16,11 +16,16 @@
 
 <div class="chat-panel">
   <div class="chat-popup" *ngIf="chatPopUp" [@myAnimation]>
-    <mat-toolbar color="accent" class="topbar telative">
+    <mat-toolbar color="accent" class="chat-heading">
       <div class="bot-aveter">
         <img src="assets/images/others/bot.png">
       </div>
       Bot
+
+      <button mat-icon-button class="close-chat" (click)="close()">
+        <mat-icon>expand_more</mat-icon>
+      </button>
+
     </mat-toolbar>
 
     <div class="chat-box">

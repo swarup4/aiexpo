@@ -3,7 +3,7 @@
 
     <!-- Cards -->
     <div fxLayout="row wrap" fxLayoutGap="grid" class="container">
-        <div fxFlex.md="33%" fxFlex.lg="33%" fxFlex.xl="33%" fxFlex.sm="100%" *ngFor="let prod of product">
+        <div fxFlex.md="50%" fxFlex.lg="33%" fxFlex.xl="33%" fxFlex.sm="50%" *ngFor="let prod of product">
             <mat-card class="product">
                 <div class="product-image">
                     <img [src]="prod.image" alt="">
@@ -18,7 +18,7 @@
                             content.
                         </p> -->
 
-                        <button mat-raised-button color="accent" (click)="chat.triggerCheckPrice(prod.id)">Check Price</button>
+                        <button mat-raised-button color="primary" (click)="chat.triggerCheckPrice(prod.id)">Check Price</button>
                     </div>
                 </mat-card-content>
             </mat-card>

@@ -54,6 +54,10 @@ export class ChatComponent implements OnInit {
     this.chatPopUp = !this.chatPopUp;
   }
 
+  close(){
+    this.chatPopUp = !this.chatPopUp;
+  }
+
   triggerCheckPrice(id: number){
     this.chatPopUp = !this.chatPopUp;
   }
@@ -64,33 +68,36 @@ export class ChatComponent implements OnInit {
     return time;
   }
 
-  sendMessage(msg: string){
-    this.message = "";
+  sendMessage(msg: string) {
+    let message = msg.trim();
+    if (message.length > 0) {
+      this.message = "";
 
-    let obj = {
-      sentBy: "user",
-      content: msg,
-      time: this.getTime()
-    }
-    this.messages.push(obj);
-
-    let sendObj = {
-      sender: "Swarup",
-      message: msg
-     }
-
-    this.chatService.converse(sendObj).subscribe((res: any) => {
-      // console.log(res);
-      let botObj = {
-        sentBy: "bot",
-        content: res[0].text,
+      let obj = {
+        sentBy: "user",
+        content: message,
         time: this.getTime()
       }
-      console.log(botObj);
-      this.messages.push(botObj);
-    }, err => {
-      console.log(err);
-    });
+      this.messages.push(obj);
+
+      let sendObj = {
+        sender: "Swarup",
+        message: message
+      }
+
+      this.chatService.converse(sendObj).subscribe((res: any) => {
+        let botObj = {
+          sentBy: "bot",
+          content: res[0].text,
+          time: this.getTime()
+        }
+        console.log(botObj);
+        this.messages.push(botObj);
+      }, err => {
+        console.log(err);
+      });
+    }
+
   }
 
   // ngAfterViewChecked() {
