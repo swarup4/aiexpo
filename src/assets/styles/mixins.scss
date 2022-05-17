@@ -25,6 +25,10 @@ $color-value in $color-array {
     color: $color-value;
   }
 
+  .text-#{$color-name}:hover {
+    color: $color-value;
+  }
+
   .bg-#{$color-name} {
     background-color: $color-value;
   }

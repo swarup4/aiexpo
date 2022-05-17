@@ -17,7 +17,6 @@ import { SpinnerComponent } from './common/spinner/spinner.component';
 import { MainComponent } from './main/main.component';
 import { ContactsComponent } from './common/contacts/contacts.component';
 import { StickerComponent } from './common/sticker/sticker.component';
-import { HaggleBotComponent } from './haggle-bot/haggle-bot.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProductComponent } from './product/product.component';
@@ -44,7 +43,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ActivityComponent,
     ContactsComponent,
     StickerComponent,
-    HaggleBotComponent,
     LoginComponent,
     SignupComponent,
     ProductComponent,
