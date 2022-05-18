@@ -18,17 +18,17 @@ export class ProductComponent implements OnInit {
   product: Product[] = [
     {
       id: 1,
-      image: "assets/images/product/Camera.jpeg",
+      image: "https://aiexpo.s3.amazonaws.com/ui/product/Camera.jpeg",
       name: "DSLR Camera",
     },
     {
       id: 2,
-      image: "assets/images/product/headphone.jpeg",
+      image: "https://aiexpo.s3.amazonaws.com/ui/product/headphone.jpeg",
       name: "Boat Headphone",
     },
     {
       id: 3,
-      image: "assets/images/product/smart watch.jpeg",
+      image: "https://aiexpo.s3.amazonaws.com/ui/product/smart watch.jpeg",
       name: "Apple Watch",
     }
   ];
