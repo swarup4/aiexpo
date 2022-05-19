@@ -1,19 +1,3 @@
-<!-- <div class="header">Angular Bot</div>
-<div class="footer">
-  <div #scrollMe class="msg-scroll">
-    <ng-container *ngFor="let message of messages | async">
-      <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot', 'to':   message.sentBy === 'user' }">
-        {{ message.content }}
-      </div>
-    </ng-container>
-  </div>
-  <div class="input-btns">
-    <label for="nameField">Your Message</label>
-    <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
-    <button class="float-right" (click)="sendMessage()">Send</button>
-  </div>
-</div> -->
-
 <div class="chat-panel">
   <div class="chat-popup" *ngIf="chatPopUp" [@myAnimation]>
     <mat-toolbar color="accent" class="chat-heading">
@@ -50,7 +34,6 @@
       <div class="bot-image">
         <img src="https://aiexpo.s3.amazonaws.com/ui/bot.png">
       </div>
-      <!-- <i-feather name="message-square" class="feather-base me-16"></i-feather> -->
     </button>
   </div>
 </div>

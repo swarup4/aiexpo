@@ -7,6 +7,17 @@
     }
 }
 
+.add-product-button{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+
+    .feather-base{
+        width: 25px !important;
+        height: 25px !important;
+    }
+}
+
 .github-corner:hover .octo-arm {
     animation: octocat-wave 560ms ease-in-out
 }

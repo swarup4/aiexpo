@@ -13,18 +13,20 @@
                         <p class="fs-18 lh-lg fw-medium">
                             {{ prod.name }}
                         </p>
-                        <!-- <p class="op-7">
-                            Some quick example text to build on the card title and make up the bulk of the card's
-                            content.
-                        </p> -->
-
-                        <button mat-raised-button color="primary" (click)="chat.triggerCheckPrice(prod.id)">Check Price</button>
+                        <!-- <button mat-raised-button color="primary" (click)="chat.triggerCheckPrice(prod.id)">Check
+                            Price</button> -->
                     </div>
                 </mat-card-content>
             </mat-card>
         </div>
     </div>
 
-    <app-chat #chat></app-chat>
+    <!-- <app-chat #chat></app-chat> -->
+
+    <div class="add-product-button">
+        <button mat-fab color="accent" class="image-fab-btn" (click)="addProduct()">
+            <i-feather name="plus" class="feather-base"></i-feather>
+        </button>
+    </div>
 
 </div>

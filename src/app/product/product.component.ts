@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import { AddProjectComponent } from '../add-project/add-project.component';
 
 interface Product {
   id: number
@@ -33,9 +35,17 @@ export class ProductComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  addProduct(){
+    const dialogRef = this.dialog.open(AddProjectComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }
