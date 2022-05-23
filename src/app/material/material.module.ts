@@ -89,7 +89,7 @@ const AllMaterialModules = [
   MatTooltipModule,
   MatPaginatorModule,
   MatSortModule,
-  MatTableModule,
+  MatTableModule
 ];
 
 @NgModule({

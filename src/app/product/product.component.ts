@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import { AddProjectComponent } from '../add-project/add-project.component';
 
 interface Product {
   id: number
@@ -14,6 +16,8 @@ interface Product {
 export class ProductComponent implements OnInit {
 
   pageName: string = 'Product';
+
+  isAdmin: boolean = false;
 
   product: Product[] = [
     {
@@ -33,9 +37,23 @@ export class ProductComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private dialog: MatDialog) {
+    if(sessionStorage['userData'] && JSON.parse(sessionStorage['userData']).isAdmin == true){
+      this.isAdmin = JSON.parse(sessionStorage['userData']).isAdmin;
+    }else{
+      this.isAdmin = false;
+    }
+  }
 
   ngOnInit(): void {
+  }
+
+  addProduct(){
+    const dialogRef = this.dialog.open(AddProjectComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }

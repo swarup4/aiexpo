@@ -8,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   checked = true;
+  userData: any = {
+    username: "",
+    password: "",
+    isAdmin: false
+  };
   
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  login(userData: any){
+    userData.isAdmin = true;
+    sessionStorage.setItem("userData", JSON.stringify(userData)); 
   }
 
 }

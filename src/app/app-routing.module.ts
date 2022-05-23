@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guard/auth.guard';
 import { MainComponent } from './main/main.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductComponent } from './product/product.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
         component: DashboardComponent
       }, {
         path: 'haggle',
-        component: ProductComponent
+        component: ProductComponent,
+        canActivate: [AuthGuard]
       }, {
         path: 'linear',
         component: LinearRegressionComponent

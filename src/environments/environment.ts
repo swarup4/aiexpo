@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  host: 'http://localhost:3000'
   // dialogflow: {
   //   angularBot: 'c7f5e18630d04ca5b5e7d6c518fdaf25'
   // }

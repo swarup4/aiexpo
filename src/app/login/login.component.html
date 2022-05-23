@@ -9,12 +9,12 @@
                     <div>
                         <mat-form-field class="w-100 fs-16" appearance="outline">
                             <mat-label>Username</mat-label>
-                            <input matInput type="text" placeholder="Enter your Userame">
+                            <input matInput type="text" placeholder="Enter your Userame" name="username" [(ngModel)]="userData.username">
                         </mat-form-field>
 
                         <mat-form-field class="w-100 fs-16" appearance="outline">
                             <mat-label>Password</mat-label>
-                            <input matInput type="password" placeholder="Enter your Password">
+                            <input matInput type="password" placeholder="Enter your Password" name="password" [(ngModel)]="userData.password">
                         </mat-form-field>
 
                         <section class="fs-16 mb-32" fxLayout="row" fxLayoutAlign="space-between center">
@@ -24,7 +24,7 @@
                     </div>
 
                     <div fxLayout="row" fxLayoutAlign="center">
-                        <button mat-raised-button color="accent" type="submit">Login</button>
+                        <button mat-raised-button color="accent" (click)="login(userData)">Login</button>
                     </div>
 
                     <div class="text-center mt-20">
