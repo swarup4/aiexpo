@@ -9,6 +9,7 @@ import { AddProjectService } from './add-project.service';
 export class AddProjectComponent implements OnInit {
 
   imageObj: any;
+  imageName: string = "";
 
   constructor(private addProjectService: AddProjectService) { }
 
@@ -17,6 +18,8 @@ export class AddProjectComponent implements OnInit {
 
   onChange(event: any){
     const FILE = event.target.files[0];
+    this.imageName = FILE.name;
+    
     this.imageObj = FILE;
   }
 
@@ -24,9 +27,9 @@ export class AddProjectComponent implements OnInit {
     const imageForm = new FormData();
     imageForm.append('image', this.imageObj);
 
-    this.addProjectService.fileUpload(imageForm).subscribe(res => {
-      console.log(res);
-    });
+    // this.addProjectService.fileUpload(imageForm).subscribe(res => {
+    //   console.log(res);
+    // });
   }
 
 }

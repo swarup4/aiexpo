@@ -13,17 +13,18 @@
                         <p class="fs-18 lh-lg fw-medium">
                             {{ prod.name }}
                         </p>
-                        <!-- <button mat-raised-button color="primary" (click)="chat.triggerCheckPrice(prod.id)">Check
-                            Price</button> -->
+                        <button mat-raised-button color="primary" *ngIf="!isAdmin" (click)="chat.triggerCheckPrice(prod.id)">Check Price</button>
                     </div>
                 </mat-card-content>
             </mat-card>
         </div>
     </div>
 
-    <!-- <app-chat #chat></app-chat> -->
+    <div [hidden]="isAdmin">
+        <app-chat #chat></app-chat>
+    </div>
 
-    <div class="add-product-button">
+    <div class="add-product-button" *ngIf="isAdmin">
         <button mat-fab color="accent" class="image-fab-btn" (click)="addProduct()">
             <i-feather name="plus" class="feather-base"></i-feather>
         </button>

@@ -17,6 +17,8 @@ export class ProductComponent implements OnInit {
 
   pageName: string = 'Product';
 
+  isAdmin: boolean = false;
+
   product: Product[] = [
     {
       id: 1,
@@ -35,7 +37,13 @@ export class ProductComponent implements OnInit {
     }
   ];
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) {
+    if(sessionStorage['userData'] && JSON.parse(sessionStorage['userData']).isAdmin == true){
+      this.isAdmin = JSON.parse(sessionStorage['userData']).isAdmin;
+    }else{
+      this.isAdmin = false;
+    }
+  }
 
   ngOnInit(): void {
   }
