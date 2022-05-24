@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -9,19 +11,21 @@ export class LoginComponent implements OnInit {
 
   checked = true;
   userData: any = {
-    username: "",
-    password: "",
-    isAdmin: false
+    email: "",
+    password: ""
   };
   
-  constructor() { }
+  constructor(private loginService: LoginService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   login(userData: any){
-    userData.isAdmin = true;
-    sessionStorage.setItem("userData", JSON.stringify(userData)); 
+    this.loginService.login(userData).subscribe(res => {
+      sessionStorage.setItem("userData", JSON.stringify(res)); 
+      this.router.navigate(['haggle']);
+    })
+    
   }
 
 }
