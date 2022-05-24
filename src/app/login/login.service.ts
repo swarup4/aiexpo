@@ -5,16 +5,15 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class AddProjectService {
+export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  fileUpload(file: any) {
-    return this.http.post(environment.host + '/product/upload', file);
+  signup(data: any){
+    return this.http.post(environment.host + '/user/signup', data);
   }
 
-  getData(){
-    let url = environment.host + '/user';
-    return this.http.get(url);
+  login(data: any){
+    return this.http.post(environment.host + '/user/login', data);
   }
 }

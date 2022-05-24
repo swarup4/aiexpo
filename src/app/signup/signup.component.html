@@ -9,19 +9,29 @@
                     <div>
                         <mat-form-field class="w-100 fs-16" appearance="outline">
                             <mat-label>Name</mat-label>
-                            <input matInput type="text" placeholder="Enter your Name">
+                            <input matInput type="text" placeholder="Enter your Name" name="name" [(ngModel)]="userData.name">
                         </mat-form-field>
 
                         <mat-form-field class="w-100 fs-16" appearance="outline">
-                            <mat-label>Username</mat-label>
-                            <input matInput type="text" placeholder="Enter your Userame">
+                            <mat-label>Email</mat-label>
+                            <input matInput type="text" placeholder="Enter your Email" name="email" [(ngModel)]="userData.email">
                         </mat-form-field>
 
                         <mat-form-field class="w-100 fs-16" appearance="outline">
                             <mat-label>Password</mat-label>
-                            <input matInput type="password" placeholder="Enter your Password">
+                            <input matInput type="password" placeholder="Enter your Password" name="password" [(ngModel)]="userData.password">
                         </mat-form-field>
 
+                        <mat-form-field class="w-100 fs-16" appearance="outline">
+                            <mat-label>Phone</mat-label>
+                            <input matInput type="text" placeholder="Enter your Phone No" name="phone" [(ngModel)]="userData.phone">
+                        </mat-form-field>
+
+                        <mat-radio-group color="primary" class="radio-group fs-16" [(ngModel)]="userData.gender" name="gender">
+                            <mat-label class="text-secondary radio-group-name">Gender</mat-label>
+                            <mat-radio-button value="female" class="mt-8 mb-16">Female</mat-radio-button>
+                            <mat-radio-button value="male" class="mt-8 mb-16">Male</mat-radio-button>
+                        </mat-radio-group>
                         <!-- <section class="fs-16 mb-32" fxLayout="row" fxLayoutAlign="space-between center">
                             <mat-checkbox color="primary" [checked]="checked" class="d-block">Remember me</mat-checkbox>
                             <a href="#" class="text-info">Forgot Password</a>
@@ -29,7 +39,7 @@
                     </div>
 
                     <div fxLayout="row" fxLayoutAlign="center">
-                        <button mat-raised-button color="accent" type="submit">Sign Up</button>
+                        <button mat-raised-button color="accent" type="submit" (click)="signup(userData)">Sign Up</button>
                     </div>
 
                     <div class="text-center mt-20">
