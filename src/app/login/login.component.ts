@@ -9,7 +9,7 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent implements OnInit {
 
-  checked = true;
+  checked = false;
   userData: any = {
     email: "",
     password: ""

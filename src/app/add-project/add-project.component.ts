@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AddProjectService } from './add-project.service';
+import { ProjectService } from './project.service';
+import { ProjectItems, projectType } from './project-items';
 
 @Component({
   selector: 'app-add-project',
@@ -8,28 +9,39 @@ import { AddProjectService } from './add-project.service';
 })
 export class AddProjectComponent implements OnInit {
 
-  imageObj: any;
-  imageName: string = "";
+  projectObj: any;
+  projectName: string = "";
 
-  constructor(private addProjectService: AddProjectService) { }
+  projectType: projectType[] = ProjectItems;
+
+  project: any = {
+    type: '',
+    name: '',
+    description: '',
+    file: ''
+  }
+
+  constructor(private projectService: ProjectService) {}
 
   ngOnInit(): void {
   }
 
   onChange(event: any){
     const FILE = event.target.files[0];
-    this.imageName = FILE.name;
+    this.projectName = FILE.name;
     
-    this.imageObj = FILE;
+    this.projectObj = FILE;
   }
 
-  addProduct() {
-    const imageForm = new FormData();
-    imageForm.append('image', this.imageObj);
+  addProject(data: any) {
+    // const imageForm = new FormData();
+    // imageForm.append('image', this.projectObj);
 
-    // this.addProjectService.fileUpload(imageForm).subscribe(res => {
-    //   console.log(res);
-    // });
+    this.projectService.addProject(data).subscribe(res => {
+      console.log(res);
+    }, err => {
+      console.log(err);
+    });
   }
 
 }

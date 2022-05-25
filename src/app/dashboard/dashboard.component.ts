@@ -1,7 +1,6 @@
-import { MediaMatcher, BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import {ChangeDetectorRef, Component,OnDestroy,AfterViewInit, OnInit} from '@angular/core';
-// import { MenuItems } from '../common/sidebar/menu-items';
-
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddProjectComponent } from '../add-project/add-project.component';
 
 
 @Component({
@@ -11,27 +10,18 @@ import {ChangeDetectorRef, Component,OnDestroy,AfterViewInit, OnInit} from '@ang
 })
 export class DashboardComponent implements OnInit {
 
-  // mobileQuery: MediaQueryList;
-
-  // private _mobileQueryListener: () => void;
-
   search: boolean = false;
 
-  
-
-  constructor(
-    changeDetectorRef: ChangeDetectorRef,
-    media: MediaMatcher
-    // public menuItems: MenuItems
-  ) {
-    // this.mobileQuery = media.matchMedia('(min-width: 768px)');
-    // this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    // this.mobileQuery.addListener(this._mobileQueryListener);
-  }
-
-  
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit(): void {
+  }
+
+  addProject() {
+    const dialogRef = this.dialog.open(AddProjectComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }

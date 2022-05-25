@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectService } from 'src/app/add-project/project.service';
 
-interface Product {
-  id: number;
-  name: string;
-  details: string;
-  theme: string;
-}
 
 @Component({
   selector: 'app-linear-regression',
@@ -16,28 +11,27 @@ export class LinearRegressionComponent implements OnInit {
 
   pageName: string = 'Linear Regrassion';
 
-  product: Product[] = [
-    {
-      id: 1,
-      name: "DSLR",
-      details: "DSLR Camera",
-      theme: "bg-warning"
-    }, {
-      id: 2,
-      name: "Boat",
-      details: "Boat Headphone",
-      theme: "bg-primary"
-    }, {
-      id: 3,
-      name: "Apple",
-      details: "Apple Watch",
-      theme: "bg-success"
-    }
-  ];
+  project: any = [];
 
-  constructor() { }
+  themeList = [
+    "bg-warning", "bg-primary", "bg-success", "bg-info", "bg-danger"
+  ]
+
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit(): void {
+    this.projectService.getProject('linear').subscribe((res: any) => {
+      let data = res.map((element: any) => ({ ...element, theme: this.getTheme() }));
+      this.project = data;
+    }, err => {
+      console.log(err);
+    });
   }
+
+  getTheme() {
+    const theme = this.themeList[Math.floor(Math.random() * this.themeList.length)];
+    return theme;
+  }
+
 
 }
