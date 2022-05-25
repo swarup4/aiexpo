@@ -34,7 +34,6 @@ export class AddProjectComponent implements OnInit {
   }
 
   addProject(data: any) {
-    console.log(data);
     // const imageForm = new FormData();
     // imageForm.append('image', this.projectObj);
 
