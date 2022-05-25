@@ -5,7 +5,7 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class AddProjectService {
+export class ProjectService {
 
   constructor(private http: HttpClient) { }
 
@@ -13,8 +13,11 @@ export class AddProjectService {
     return this.http.post(environment.host + '/product/upload', file);
   }
 
-  getData(){
-    let url = environment.host + '/user';
-    return this.http.get(url);
+  getProject(type: string){
+    return this.http.get(environment.host + '/project/' + type);
+  }
+
+  addProject(data: any){
+    return this.http.post(environment.host + '/project/addProject', data);
   }
 }

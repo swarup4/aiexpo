@@ -3,15 +3,15 @@
 
     <!-- Cards -->
     <div fxLayout="row wrap" fxLayoutGap="grid" class="container">
-        <div fxFlex.md="50%" fxFlex.lg="33%" fxFlex.xl="33%" fxFlex.sm="50%" *ngFor="let prod of product">
+        <div fxFlex.md="50%" fxFlex.lg="33%" fxFlex.xl="33%" fxFlex.sm="50%" *ngFor="let proj of project">
             <mat-card>
-                <mat-card-header class="text-white" [ngClass]="prod.theme">
-                    <mat-card-title>{{ prod.name }}</mat-card-title>
+                <mat-card-header class="text-white" [ngClass]="proj.theme">
+                    <mat-card-title>{{ proj.name }}</mat-card-title>
                 </mat-card-header>
                 <mat-card-content>
                     <div>
                         <p class="fs-18 lh-lg fw-medium">
-                            {{ prod.details }}
+                            {{ proj.description }}
                         </p>
                     </div>
                 </mat-card-content>
