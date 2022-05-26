@@ -33,6 +33,7 @@ import { ActivityComponent } from './common/activity/activity.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddProjectComponent } from './add-project/add-project.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { SeeMoreComponent } from './common/see-more/see-more.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { AddProductComponent } from './add-product/add-product.component';
     LinearRegressionComponent,
     ProductListComponent,
     AddProjectComponent,
-    AddProductComponent
+    AddProductComponent,
+    SeeMoreComponent
   ],
   imports: [
     BrowserModule,

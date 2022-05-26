@@ -1,11 +1,11 @@
-.container{
+.container {
     .mat-card {
         border-radius: 20px;
-        box-shadow: 1px 0 20px #00000014!important;
+        box-shadow: 1px 0 20px #00000014 !important;
         padding: 0;
         margin: 15px;
         overflow: hidden;
-    
+
         .mat-card-header {
             padding: 12px;
             color: #fff;
@@ -15,12 +15,35 @@
                 margin: 5px 0;
             }
         }
-    
+
+        .mat-card-content {
+            padding: 20px;
+            margin-bottom: 0;
+
+            .content {
+                height: 150px;
+                overflow: hidden;
+
+                p {
+                    font-size: 14px;
+                    font-weight: normal;
+                    margin: 0;
+                }
+            }
+            .see-more{
+                text-align: center;
+
+                a{
+                    cursor: pointer;
+                }
+            }
+        }
+
         .mat-card-actions {
             border-top: 1px solid rgba(120, 130, 140, .13);
             padding: 8px 0 !important;
             margin-bottom: 0 !important;
-    
+
             .mat-button {
                 font-size: 18px;
             }
