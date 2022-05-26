@@ -20,4 +20,8 @@ export class ProjectService {
   addProject(data: any){
     return this.http.post(environment.host + '/project/addProject', data);
   }
+
+  editProject(id: string, data: any){
+    return this.http.put(environment.host + '/project/editProject/' + id, data);
+  }
 }
