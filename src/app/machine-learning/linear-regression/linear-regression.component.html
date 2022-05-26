@@ -7,6 +7,9 @@
             <mat-card>
                 <mat-card-header class="text-white" [ngClass]="proj.theme">
                     <mat-card-title>{{ proj.name }}</mat-card-title>
+                    <a class="text-white" (click)="edit(proj._id, proj.name, proj.description)">
+                        <i-feather name="edit" class="feather-base"></i-feather>
+                    </a>
                 </mat-card-header>
                 <mat-card-content>
                     <div class="content">

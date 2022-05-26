@@ -9,10 +9,18 @@
         .mat-card-header {
             padding: 12px;
             color: #fff;
+            position: relative;
 
             .mat-card-title {
                 font-size: 16px;
                 margin: 5px 0;
+            }
+
+            > a {
+                position: absolute;
+                cursor: pointer;
+                right: 17px;
+                top: 17px;
             }
         }
 
