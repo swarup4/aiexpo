@@ -53,6 +53,22 @@ ul {
   padding-left: 0;
 }
 
+.mat-dialog-content{
+  ol{
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  h4{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+  }
+  a{
+    color: #03c9d7;
+  }
+}
+
 :focus {
   outline: 0;
   box-shadow: none !important;
