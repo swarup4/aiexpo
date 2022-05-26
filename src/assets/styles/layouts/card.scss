@@ -25,12 +25,12 @@
         }
 
         .mat-card-content {
-            padding: 20px;
+            padding: 20px 20px 10px;
             margin-bottom: 0;
             
 
             .content {
-                height: 150px;
+                height: 160px;
                 overflow: hidden;
                 font-size: 14px;
                 font-weight: normal;
@@ -38,6 +38,7 @@
             }
             .see-more{
                 text-align: center;
+                margin-top: 10px;
 
                 a{
                     cursor: pointer;
