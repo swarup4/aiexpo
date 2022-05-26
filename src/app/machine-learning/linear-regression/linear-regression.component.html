@@ -10,9 +10,7 @@
                 </mat-card-header>
                 <mat-card-content>
                     <div class="content">
-                        <p class="lh-lg">
-                            {{ proj.description }}
-                        </p>
+                        <div class="lh-lg" [innerHTML]="proj.description"></div>
                     </div>
                     <div class="see-more">
                         <a class="text-primary" (click)="seeMore(proj.name, proj.description)">See More</a>

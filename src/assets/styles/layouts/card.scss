@@ -19,16 +19,14 @@
         .mat-card-content {
             padding: 20px;
             margin-bottom: 0;
+            
 
             .content {
                 height: 150px;
                 overflow: hidden;
-
-                p {
-                    font-size: 14px;
-                    font-weight: normal;
-                    margin: 0;
-                }
+                font-size: 14px;
+                font-weight: normal;
+                margin: 0;
             }
             .see-more{
                 text-align: center;
