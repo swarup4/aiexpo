@@ -27,9 +27,12 @@ export class AddProjectComponent implements OnInit {
 
   constructor(private projectService: ProjectService,
     public dialogRef: MatDialogRef<AddProjectComponent>, @Optional() @Inject(MAT_DIALOG_DATA) public data: any) {
-    this.projectId = data.id;
-    this.project.name = data.name;
-    this.project.description = data.description;
+      
+      if(data && data != null){
+        this.projectId = data.id;
+        this.project.name = data.name;
+        this.project.description = data.description;
+      }
   }
 
   ngOnInit(): void {
